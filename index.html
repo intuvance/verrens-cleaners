@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verrens Cleaners Flyer</title>
+    <!-- Font Awesome for Modern Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      /* --- YOUR BRAND COLORS --- */
+      :root {
+        --primary-color: #0b2c3f; /* Deep Navy */
+        --accent-color: #821032; /* Wine Red */
+        --action-color: #f98d32; /* Bright Orange */
+        --bg-color: #f4f7f9; /* Off-white background */
+        --text-color: #333333;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e5e5e5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      /* WhatsApp Status Aspect Ratio (9:16) */
+      .flyer-container {
+        width: 100%;
+        max-width: 450px;
+        aspect-ratio: 9 / 16;
+        background-color: var(--bg-color);
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Header Section */
+      .header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 25px 10px 15px;
+        text-align: center;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        position: relative;
+      }
+
+      .logo {
+        font-size: 1.4rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+
+      .tagline {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: var(--accent-color);
+        display: inline-block;
+        padding: 3px 9px;
+        border-radius: 20px;
+        font-weight: bold;
+        color: white;
+      }
+
+      /* Content Section */
+      .content {
+        flex: 1;
+        padding: 25px 20px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .checklist-title {
+        text-align: center;
+        color: var(--primary-color);
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .checklist-title::before,
+      .checklist-title::after {
+        content: "";
+        height: 2px;
+        width: 30px;
+        background-color: var(--action-color);
+      }
+
+      /* Two Column Layout for Services */
+      .services-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        flex: 1;
+      }
+
+      .service-box {
+        background: white;
+        padding: 8px 5px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-left: 4px solid var(--accent-color);
+        transition: transform 0.2s;
+      }
+
+      .service-icon {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: var(--action-color);
+      }
+
+      .service-text {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        line-height: 1.2;
+      }
+
+      /* Footer Section */
+      .footer {
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+        border-top: 4px solid var(--primary-color);
+      }
+
+      .cta-button {
+        background-color: var(--action-color);
+        color: var(--primary-color);
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 10px rgba(249, 141, 50, 0.4);
+      }
+
+      .contact-info {
+        font-size: 0.9rem;
+        color: var(--primary-color);
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .contact-info a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+
+      /* Responsive adjustments for mobile screens */
+      @media (max-width: 450px) {
+        .flyer-container {
+          max-width: 100%;
+          box-shadow: none;
+          aspect-ratio: auto;
+          min-height: 100vh;
+        }
+        .logo {
+          font-size: 2rem;
+        }
+        .service-text {
+          font-size: 0.75rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flyer-container">
+      <!-- Header -->
+      <div class="header">
+        <div class="logo">Verrens Cleaners</div>
+        <div class="tagline">We Do The Dirty Work!</div>
+      </div>
+
+      <!-- Body / Services -->
+      <div class="content">
+        <div class="checklist-title">Our Services</div>
+
+        <div class="services-grid">
+          <!-- Service Items -->
+          <div class="service-box">
+            <i class="fa-solid fa-spray-can-sparkles service-icon"></i>
+            <div class="service-text">Deep Cleaning</div>
+          </div>
+          <div class="service-box">
+            <i class="fa-solid fa-window-maximize service-icon"></i>
+            <div class="service-text">Windows & Blinds</div>
+          </div>
+          <div class="service-box">
+            <i class="fa-solid fa-car-side service-icon"></i>
+            <div class="service-text">Car Wash</div>
+          </div>
+          <div class="service-box">
+            <i class="fa-solid fa-couch service-icon"></i>
+            <div class="service-text">Furniture & Carpet</div>
+          </div>
+          <div class="service-box">
+            <i class="fa-solid fa-house service-icon"></i>
+            <div class="service-text">Residential Cleaning</div>
+          </div>
+          <div class="service-box">
+            <i class="fa-solid fa-helmet-safety service-icon"></i>
+            <div class="service-text">Post Construction</div>
+          </div>
+          <div class="service-box">
+            <i class="fa-solid fa-key service-icon"></i>
+            <div class="service-text">Move-in / Move-out</div>
+          </div>
+          <div class="service-box">
+            <i class="fa-solid fa-bug-slash service-icon"></i>
+            <div class="service-text">Fumigation</div>
+          </div>
+          <div class="service-box">
+            <i class="fa-solid fa-bed service-icon"></i>
+            <div class="service-text">Airbnb Cleaning</div>
+          </div>
+          <div class="service-box">
+            <i class="fa-solid fa-wind service-icon"></i>
+            <div class="service-text">Vacuum Upholstery</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer / Contact -->
+      <div class="footer">
+        <a href="https://wa.me/256785880997" class="cta-button">
+          <i class="fa-brands fa-whatsapp"></i> Book on WhatsApp
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
