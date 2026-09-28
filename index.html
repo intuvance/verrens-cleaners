@@ -130,6 +130,42 @@
 
       .service-box:last-child {
         grid-column: span 3;
+        position: relative;
+      }
+
+      .service-book-btn {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 44px;
+        padding: 0 16px;
+        background-color: var(--action-color);
+        color: var(--primary-color);
+        border: none;
+        border-radius: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(249, 141, 50, 0.4);
+        cursor: pointer;
+        transition: transform 0.2s;
+        white-space: nowrap;
+      }
+
+      .service-book-btn:hover {
+        transform: translateY(-50%) scale(1.05);
+      }
+
+      .service-book-btn i {
+        font-size: 1.1rem;
+      }
+
+      .service-book-btn span {
+        font-size: 0.85rem;
+        font-weight: 700;
       }
 
       .service-icon {
@@ -252,15 +288,17 @@
           <div class="service-box">
             <i class="fa-solid fa-wind service-icon"></i>
             <div class="service-text">Vacuum Upholstery</div>
+            <a href="https://wa.me/256785880997" class="service-book-btn">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Book Now!</span>
+            </a>
           </div>
         </div>
       </div>
 
       <!-- Footer / Contact -->
       <div class="footer">
-        <a href="https://wa.me/256785880997" class="cta-button">
-          <i class="fa-brands fa-whatsapp"></i> Book on WhatsApp
-        </a>
+        <div class="contact-info">From Sunday to Friday 8:00 AM to 5:00 PM</div>
       </div>
     </div>
   </body>
